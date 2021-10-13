@@ -10,7 +10,7 @@ from tensorflow.keras.applications.xception import Xception
 from tensorflow.keras.preprocessing.image import load_img
 from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.applications.xception import preprocess_input
-# from tensorflow.keras.models import Model
+from tensorflow.keras.models import Model
 import string
 import numpy as np
 from pickle import load

@@ -155,13 +155,14 @@ def beam_search_pred(model, pic_fe, wordtoix, K_beams=3, log=False):
 from tensorflow.keras.models import model_from_json
 json_file = open('model.json', 'r')
 loaded_model_json = json_file.read()
-json_file.close()
+# json_file.close()
 #
 # print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 loaded_model = model_from_json(loaded_model_json)
 # print("-------------------------------------------------")
 # load weights into new model
 loaded_model.load_weights("model_json.h5")
+json_file.close()
 # for masking pad0 outputs
 # def masked_loss_function(real, pred):
 #     mask = tf.math.logical_not(tf.math.equal(real, 0))
